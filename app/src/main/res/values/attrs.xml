@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EtchView">
+    <attr name="skewX" format="integer" />
+    <attr name="skewY" format="integer" />
+    <attr name="skewZ" format="integer" />
+    <attr name="pivotPoint" format="string" />
+</declare-styleable>
+    <declare-styleable name="Portal">
+        <attr name="brother" format="reference" />
+    </declare-styleable>
+</resources>

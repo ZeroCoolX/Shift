@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.75">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_weight="10">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="match_parent"
+                android:layout_weight="60"
+                android:layout_height="0dp"
+                android:background="@drawable/previous" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <Button
+                android:id="@+id/restart"
+                android:layout_width="match_parent"
+                android:layout_weight="60"
+                android:layout_height="0dp"
+                android:background="@drawable/restart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <Button
+                android:id="@+id/hint"
+                android:layout_width="match_parent"
+                android:layout_weight="60"
+                android:layout_height="0dp"
+                android:background="@drawable/hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15" />
+
+            <TextView
+                android:id="@+id/num_hints"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:text="0"
+                android:background="@drawable/hints_num"
+                android:textColor="@color/num_hints"
+                android:gravity="center"
+                android:textSize="@dimen/hints_textsize"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <View
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/timer" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:textColor="@color/etch"
+                android:gravity="center"
+                android:id="@+id/minutes"
+                android:text="00"
+                android:textSize="@dimen/header_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:textColor="@color/etch"
+                android:id="@+id/colon"
+                android:gravity="center"
+                android:text=":"
+                android:textSize="@dimen/header_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:textColor="@color/etch"
+                android:id="@+id/seconds"
+                android:gravity="center"
+                android:text="00"
+                android:textSize="@dimen/header_textsize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <View
+                android:id="@+id/numMoves"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:background="@drawable/tally" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/moves"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/etch"
+                android:textSize="@dimen/header_textsize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="10"
+        android:layout_weight="4.5">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <lucky8s.shift.EtchView
+                android:id="@+id/pack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                ads:skewX="-65"
+                ads:skewY="0"
+                ads:skewZ="0"
+                ads:pivotPoint="start"
+                android:paddingLeft="@dimen/play_etch_paddingleft"
+                android:translationY="@dimen/etch_translateY"
+                android:text="Bonus Pack"
+                android:textColor="@color/etch"
+                android:textSize="@dimen/etch_textsize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <lucky8s.shift.EtchView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                ads:skewX="-65"
+                ads:skewY="0"
+                ads:skewZ="0"
+                ads:pivotPoint="end"
+                android:translationY="@dimen/etch_translateY"
+                android:text="Level 1"
+                android:paddingRight="5dp"
+                android:textColor="@color/etch"
+                android:textSize="@dimen/etch_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="69.75"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/rink_group">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="82"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/rink"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/hint_1"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_left"
+                android:layout_alignTop="@+id/obstacle24"
+                android:layout_toRightOf="@+id/obstacle24" />
+
+            <View
+                android:id="@+id/hint_2"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_down"
+                android:layout_above="@+id/obstacle33"
+                android:layout_alignLeft="@+id/obstacle33" />
+
+            <View
+                android:id="@+id/hint_3"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_right"
+                android:layout_toLeftOf="@+id/obstacle15"
+                android:layout_alignTop="@+id/obstacle15" />
+
+            <View
+                android:id="@+id/hint_4"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_up"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <View
+                android:id="@+id/hint_5"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_left"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/obstacle22" />
+
+            <View
+                android:id="@+id/hint_6"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_up"
+                android:layout_below="@+id/obstacle15"
+                android:layout_alignLeft="@+id/obstacle15" />
+
+            <View
+                android:id="@+id/hint_7"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_left"
+                android:layout_toRightOf="@+id/obstacle14"
+                android:layout_alignTop="@+id/obstacle14" />
+
+            <View
+                android:id="@+id/hint_8"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_up"
+                android:layout_below="@+id/obstacle10"
+                android:layout_alignLeft="@+id/obstacle10" />
+
+            <View
+                android:id="@+id/hint_9"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_right"
+                android:layout_toLeftOf="@+id/obstacle8"
+                android:layout_alignTop="@+id/obstacle8" />
+
+            <View
+                android:id="@+id/hint_10"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_up"
+                android:layout_below="@+id/obstacle13"
+                android:layout_alignLeft="@+id/obstacle13" />
+
+            <View
+                android:id="@+id/hint_11"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_left"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true" />
+
+            <View
+                android:id="@+id/hint_12"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_down"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/obstacle22" />
+
+            <View
+                android:id="@+id/hint_13"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_right"
+                android:layout_toLeftOf="@+id/obstacle20"
+                android:layout_alignTop="@+id/obstacle20" />
+
+            <View
+                android:id="@+id/hint_14"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/arrow_right"
+                android:layout_alignTop="@+id/obstacle28"
+                android:layout_toLeftOf="@+id/obstacle28" />
+
+            <View
+                android:id="@+id/obstacle1"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/obstacle33" />
+
+            <lucky8s.shift.Bubble
+                android:id="@+id/obstacle2"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_bubble"
+                android:layout_above="@+id/obstacle25"
+                android:layout_toLeftOf="@+id/obstacle22" />
+
+            <lucky8s.shift.Molten
+                android:id="@+id/obstacle3"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_molten"
+                android:layout_below="@+id/obstacle25"
+                android:layout_toLeftOf="@+id/obstacle9" />
+
+            <View
+                android:id="@+id/obstacle4"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignTop="@+id/obstacle33"
+                android:layout_alignLeft="@+id/obstacle2" />
+
+            <lucky8s.shift.Bubble
+                android:id="@+id/obstacle5"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_bubble"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/obstacle9" />
+
+            <lucky8s.shift.Molten
+                android:id="@+id/obstacle6"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_molten"
+                android:layout_above="@+id/obstacle9"
+                android:layout_toLeftOf="@+id/obstacle11"
+                />
+            <View
+                android:id="@+id/finish"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_finish"
+                android:layout_below="@+id/obstacle25"
+                android:layout_toRightOf="@+id/obstacle23" />
+
+            <View
+                android:id="@+id/obstacle8"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_above="@+id/obstacle29"
+                android:layout_toLeftOf="@+id/obstacle9" />
+
+            <View
+                android:id="@+id/obstacle9"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+            <View
+                android:id="@+id/obstacle10"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_below="@+id/obstacle3"
+                android:layout_toLeftOf="@+id/obstacle5" />
+
+            <lucky8s.shift.Frozen
+                android:id="@+id/obstacle11"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_frozen"
+                android:layout_below="@+id/obstacle22"
+                android:layout_toLeftOf="@+id/obstacle5" />
+
+            <View
+                android:id="@+id/obstacle12"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_above="@+id/obstacle9"
+                android:layout_toRightOf="@+id/obstacle25" />
+
+            <View
+                android:id="@+id/obstacle13"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/obstacle20" />
+
+            <lucky8s.shift.Portal
+                android:id="@+id/obstacle14"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_portal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/obstacle10"
+                ads:brother="@+id/obstacle33" />
+
+            <View
+                android:id="@+id/obstacle15"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/obstacle37" />
+
+            <lucky8s.shift.Molten
+                android:id="@+id/obstacle16"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_molten"
+                android:layout_below="@+id/obstacle33"
+                android:layout_toRightOf="@+id/obstacle25" />
+
+            <View
+                android:id="@+id/obstacle17"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <View
+                android:id="@+id/obstacle18"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_above="@+id/obstacle34"
+                android:layout_toRightOf="@+id/obstacle22" />
+
+            <lucky8s.shift.Frozen
+                android:id="@+id/obstacle20"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_frozen"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/obstacle14" />
+
+            <lucky8s.shift.Frozen
+                android:id="@+id/obstacle21"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_frozen"
+                android:layout_above="@+id/obstacle34"
+                android:layout_toRightOf="@+id/obstacle25" />
+
+            <View
+                android:id="@+id/obstacle22"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <lucky8s.shift.Portal
+                android:id="@+id/obstacle23"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_portal"
+                android:layout_alignTop="@+id/obstacle33"
+                android:layout_toLeftOf="@+id/obstacle11"
+                ads:brother="@+id/obstacle24" />
+
+            <lucky8s.shift.Portal
+                android:id="@+id/obstacle24"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_portal"
+                android:layout_below="@+id/obstacle3"
+                android:layout_toRightOf="@+id/obstacle33"
+                ads:brother="@+id/obstacle23" />
+
+            <lucky8s.shift.Molten
+                android:id="@+id/obstacle25"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_molten"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+
+            <lucky8s.shift.Bubble
+                android:id="@+id/obstacle26"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_bubble"
+                android:layout_below="@+id/obstacle3"
+                android:layout_toLeftOf="@+id/obstacle9" />
+
+            <View
+                android:id="@+id/obstacle27"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_below="@+id/obstacle20"
+                android:layout_toRightOf="@+id/obstacle22" />
+
+            <lucky8s.shift.Bubble
+                android:id="@+id/obstacle28"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_bubble"
+                android:layout_below="@+id/obstacle14"
+                android:layout_toLeftOf="@+id/obstacle4" />
+
+            <View
+                android:id="@+id/obstacle29"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:id="@+id/obstacle30"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentLeft="true"
+                android:layout_above="@+id/obstacle34" />
+
+            <lucky8s.shift.Frozen
+                android:id="@+id/obstacle31"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_frozen"
+                android:layout_below="@+id/obstacle25"
+                android:layout_toLeftOf="@+id/obstacle11" />
+
+            <lucky8s.shift.Bubble
+                android:id="@+id/obstacle32"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_bubble"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/obstacle22" />
+
+            <lucky8s.shift.Portal
+                android:id="@+id/obstacle33"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_portal"
+                android:layout_below="@+id/obstacle11"
+                android:layout_toRightOf="@+id/obstacle25"
+                ads:brother="@+id/obstacle14" />
+
+            <View
+                android:id="@+id/obstacle34"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentLeft="true"
+                android:layout_above="@+id/obstacle36" />
+
+            <View
+                android:id="@+id/obstacle35"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/obstacle10" />
+
+            <View
+                android:id="@+id/obstacle36"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/obstacle25" />
+
+            <View
+                android:id="@+id/obstacle37"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_obstacle"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/obstacle33" />
+
+            <View
+                android:id="@+id/dude"
+                android:layout_width="@dimen/obstacle_width"
+                android:layout_height="@dimen/obstacle_width"
+                android:background="@drawable/play_dude"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/obstacle14" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:layout_weight="14">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            android:layout_gravity="center_horizontal|bottom"></com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+
+</LinearLayout>

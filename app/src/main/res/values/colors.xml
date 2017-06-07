@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="turquise">#007d75</color>
+    <color name="green">#99ff00</color>
+    <color name="dkgrey">#59595c</color>
+    <color name="ltgrey">#d1d2d3</color>
+    <color name="ltgrey_tint">#50d1d2d3</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="etch">#4a2714</color>
+    <color name="num_hints">#a15838</color>
+    <color name="lt_tan">#cf854c</color>
+    <color name="dk_tan">#ab5b33</color>
+    <color name="gold">#ffa826</color>
+    <color name="gold_tint">#30ffa826</color>
+    <color name="store_icon">#ffdfb5</color>
+</resources>
